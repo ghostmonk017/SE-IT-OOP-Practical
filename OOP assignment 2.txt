@@ -20,19 +20,22 @@ public class Polymorphism {
             int choice = sc.nextInt();
 
             switch (choice) {
+
                 case 1:
                     p.accept();
                     p.display();
                     break;
+
                 case 2:
                     b.accept();
                     b.display();
                     break;
+
                 case 3:
                      m.accept();
                      m.display();
-
                     break;
+
                 case 4:
                     b.accept();
                     b.display();
@@ -40,14 +43,17 @@ public class Polymorphism {
                     b.saleCopy(order);
                     p.saleCopy(order);
                     break;
+
                 case 5:
                     m.accept();
                     int current =   m.currentIssued();
                     m.receivedIssue(current);
                     break;
+
                 case 6:
                     System.out.println("Exiting...");
                     return;
+
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
