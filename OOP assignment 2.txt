@@ -11,9 +11,9 @@ public class Polymorphism {
 
         while (true) {
             System.out.println("\nChoose an option:");
-            System.out.println("1. Accept and Display Publication");
-            System.out.println("2. Accept and Display Book");
-            System.out.println("3. Accept and Display Magazine");
+            System.out.println("1. Publication");
+            System.out.println("2. Book");
+            System.out.println("3. Magazine");
             System.out.println("4. Order and Sale Book");
             System.out.println("5. Current Issue and Received Issue of Magazine");
             System.out.println("6. Exit");
