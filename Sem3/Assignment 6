@@ -1,0 +1,53 @@
+/*Implement a program to handle Arithmetic exception, 
+ * Array Index Out Of Bounds.
+The user enters two numbers Num1 and Num2. 
+The division of Num1 and Num2 is displayed. 
+If Num1 and Num2 were not integers, the program would throw a 
+Number Format Exception. 
+If Num2 were zero, the program would throw an Arithmetic Exception. 
+Display the exception*/
+
+
+package it;
+import java.util.Scanner;
+
+
+public class lab6 {
+	
+
+	public static void main(String[] args) {
+		
+		try {
+			Scanner sc = new Scanner(System.in);
+			int num1, num2;
+            System.out.println("Enter number 1: ");
+            num1 = sc.nextInt();
+            System.out.println("Enter number 2: ");
+            num2 = sc.nextInt();
+
+            
+            
+            int division = num1 / num2;
+            System.out.println("division: " + division);
+		}
+		
+		catch (NumberFormatException e)
+		{
+			System.out.println("enter integers.");
+		}
+		
+		catch (ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println("Array Index Out Of Bounds Exception");
+		}
+        
+		catch (ArithmeticException e)
+		{
+			System.out.println("Arithmetic Exception");
+			
+		}
+
+                        		
+            
+	}
+	
