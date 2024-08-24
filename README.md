@@ -4,5 +4,5 @@
 3.Inheritance \
 4.Dynamic Binding\
 5.Interface\
-6.Exception handling\
+6.Exception handling
 
