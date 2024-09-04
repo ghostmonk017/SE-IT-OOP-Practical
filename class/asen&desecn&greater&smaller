@@ -1,0 +1,85 @@
+package lecture;
+import java.util.*;
+public class ascendescen {
+
+	public static void main(String[] args) {
+		
+
+			 	Scanner sc = new Scanner(System.in);
+			 	
+			 	System.out.print("Enter the number of elements: ");
+			 	int n = sc.nextInt();
+	
+	     	   	int[] arr = new int[n];
+	
+	        	System.out.println("Enter the elements:");
+	        	for (int i = 0; i < n; i++) {
+	     	       arr[i] = sc.nextInt();
+	     	   		}
+		        boolean swapped;
+		        for (int i = 0; i < n - 1; i++) {
+		            swapped = false;
+		            for (int j = 0; j < n - 1 - i; j++) {
+		                if (arr[j] > arr[j + 1]) {
+		                    
+		                    int temp =arr[j];
+		                    arr[j] = arr[j + 1];
+		                    arr[j + 1] = temp;
+		                    swapped = true;
+		                }
+		            }
+		            
+		            if (!swapped) 
+		            	break;
+		        }
+		        System.out.print("ascending order: ");
+		        System.out.println(Arrays.toString(arr));
+		        
+		        //descending
+		        
+		        boolean swappedd;
+		        for (int i = 0; i < n - 1; i++) {
+		            swappedd = false;
+		            for (int j = 0; j < n - 1 - i; j++) {
+		                if (arr[j] < arr[j + 1]) {
+		                    
+		                    int temp =arr[j];
+		                    arr[j] = arr[j + 1];
+		                    arr[j + 1] = temp;
+		                    swappedd = true;
+		                }
+		            }
+		            
+		            if (!swappedd) 
+		            	break;
+		        }
+		        
+		        System.out.print("descending order: ");
+		        System.out.println(Arrays.toString(arr));
+		        
+		        int largest = arr[0];
+		        for (int i = 1; i < n; i++) {
+		            if (arr[i] > largest) {
+		                largest = arr[i];
+		            }
+		        }
+		        System.out.println("Largest : " + largest);
+		        
+		        int smallest = arr[0];
+		        for (int i = 1; i < n; i++) {
+		            if (arr[i] < smallest) {
+		                smallest = arr[i];
+		            }
+		        }
+		        System.out.println("smallest : " + smallest);
+		        
+		        
+		        
+		        
+		        
+		
+
+           
+	}
+
+}
