@@ -1,0 +1,87 @@
+/*
+Implement a generic program using any collection class to count the number of elements in a
+collection that have a specific property such as even numbers, odd number, prime number and
+palindromes. 
+ */
+package oops;
+import java.util.*;
+
+public class inbuitlgeneric {
+
+		    public static void main(String[] args) {
+		        List<Integer> list = new ArrayList<>();
+		        Scanner sc = new Scanner(System.in);
+
+		        System.out.print("How many Elements: ");
+		        int n = sc.nextInt();
+
+		        // Add elements to the list
+		        for (int i = 0; i < n; i++) {
+		            System.out.print("Enter number: ");
+		            int a = sc.nextInt();
+		            list.add(a);
+		        }
+
+		        System.out.println("List of numbers: " + list);
+
+		        // Count even numbers
+		        int c_even = 0;
+		        for (int num : list) {
+		            if (num % 2 == 0) {
+		                c_even++;
+		            }
+		        }
+		        System.out.println("Even numbers: " + c_even);
+
+		        // Count odd numbers
+		        int c_odd = 0;
+		        for (int num : list) {
+		            if (num % 2 != 0) {
+		                c_odd++;
+		            }
+		        }
+		        System.out.println("Odd numbers: " + c_odd);
+
+		        // Count prime numbers
+		        int c_prime = 0;
+		        for (int num : list) {
+		            if (isPrime(num)) {
+		                c_prime++;
+		            }
+		        }
+		        System.out.println("Prime numbers: " + c_prime);
+
+
+		        int c_pal = 0;
+		        for (int num : list) {
+		            if (isPalindrome(num)) {
+		                c_pal++;
+		            }
+		        }
+		        System.out.println("Palindrome numbers: " + c_pal);
+		    }
+
+
+		    public static boolean isPrime(int num) {
+		        if (num <= 1) return false;
+		        if (num == 2) return true;
+		        if (num % 2 == 0) return false;
+		        for (int i = 3; i <= Math.sqrt(num); i += 2) {
+		            if (num % i == 0) return false;
+		        }
+		        return true;
+		    }
+
+
+		    public static boolean isPalindrome(int num) {
+		        int original = num, reverse = 0, remainder;
+		        while (num > 0) {
+		            remainder = num % 10;
+		            reverse = reverse * 10 + remainder;
+		            num = num / 10;
+		        }
+		        return original == reverse;
+		    }
+		
+
+	}
